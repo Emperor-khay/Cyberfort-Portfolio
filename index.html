@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
     <title>Portfolio</title>
+    <style>
+        .animate-fade-in{
+            animation: 0.6s ease-out 0s 1 normal none running fade-in;
+        }
+        .card-hover{
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.3s;
+            animation-duration: 0.3s;
+        }
+        .animate-scale-in {
+            animation: scale-in .4s 
+           ease-out;
+        }
+        .transition-colors {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: 
+           cubic-bezier(.4, 0, .2, 1);
+            transition-duration: .15s;
+        }
+    </style>
 </head>
 <body class="">
     <nav class=" text-white fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-red-600/20 z-50">
@@ -26,7 +47,7 @@
                 <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Contact</a></li>
             </ul>
 
-            <!-- <div data-lov-id="src/components/Navigation.tsx:44:10" data-lov-name="div" data-component-path="src/components/Navigation.tsx" data-component-line="44" data-component-file="Navigation.tsx" data-component-name="div" data-component-content="%7B%22className%22%3A%22md%3Ahidden%22%7D" class="md:hidden"><button data-lov-id="src/components/Navigation.tsx:45:12" data-lov-name="Button" data-component-path="src/components/Navigation.tsx" data-component-line="45" data-component-file="Navigation.tsx" data-component-name="Button" data-component-content="%7B%22className%22%3A%22text-white%20hover%3Atext-red-500%22%7D" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-10 w-10 text-white hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" data-lov-id="src/components/Navigation.tsx:51:52" data-lov-name="Menu" data-component-path="src/components/Navigation.tsx" data-component-line="51" data-component-file="Navigation.tsx" data-component-name="Menu" data-component-content="%7B%22className%22%3A%22h-6%20w-6%22%7D"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div> -->
+            <!-- <div data-lov-id="src/components/Navigation.tsx:44:10" data-lov-name="div" data-component-path="src/components/Navigation.tsx" data-component-line="44" data-component-file="Navigation.tsx" data-component-name="div" data-component-content="%7B%22className%22%3A%22md%3Ahidden%22%7D" class="md:hidden"><button data-lov-id="src/components/Navigation.tsx:45:12" data-lov-name="Button" data-component-path="src/components/Navigation.tsx" data-component-line="45" data-component-file="Navigation.tsx" data-component-name="Button" data-component-content="%7B%22className%22%3A%22text-white%20hover%3Atext-red-500%22%7D" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&[#14161a]p;_svg]:[#373d48] hover:bg-[#ef4343]  h-10 w-10 text-white hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" data-lov-id="src/components/Navigation.tsx:51:52" data-lov-name="Menu" data-component-path="src/components/Navigation.tsx" data-component-line="51" data-component-file="Navigation.tsx" data-component-name="Menu" data-component-content="%7B%22className%22%3A%22h-6%20w-6%22%7D"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div> -->
         </div>
     </nav>
 
@@ -45,7 +66,7 @@
                 
                 <p class="text-xl text-gray-300 mb-4 animate-fade-in delay-500 transform transition-all duration-500 hover:text-white">Cybersecurity Specialist & Red Team Operations Expert</p>
                 
-                <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in delay-700 transform transition-all duration-500 hover:text-gray-300">Advanced cybersecurity professional specializing in red team operations, threat intelligence, and tactical security solutions. Nigeria's leading cybersecurity expert.</p>
+                <p class="text-lg mb-8 max-w-2xl mx-auto animate-fade-in delay-700 transform transition-all duration-500 hover:text-gray-300">Advanced cybersecurity professional specializing in red team operations, threat intelligence, and tactical security solutions. Nigeria's leading cybersecurity expert.</p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-1000">
                     <a href="#"
@@ -73,5 +94,678 @@
             </div>
         </div>
     </section>
+
+    <section class="py-20 bg-[#14161a] text-white" id="about">
+        <div class="p-[16px] md:p-[24px] lg:px-[32px] mx-auto max-w-7xl">
+            <div class="mb-16 text-center animate-fade-in">
+                <h2 class="text-4xl font-bold text-foreground mb-4">About Me</h2>
+                <p class="text-xl text-[#94a3b8] max-w-3xl mx-auto">Nigeria's leading cybersecurity professional specializing in tactical security solutions, red team operations, and advanced threat intelligence.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="animate-fade-in">
+                    <h3 class="text-2xl font-bold text-foreground mb-6">Professional Background</h3>
+                    <div class="space-y-4 text-[#94a3b8]">
+                        <p>As a senior cybersecurity professional at CyberFort, I specialize in developing and implementing advanced cybersecurity solutions for government agencies and enterprise clients across Nigeria.</p>
+                        <p>I have successfully delivered comprehensive security solutions and provided specialized consulting services across various sectors, focusing on professional data security and advanced threat protection methodologies.</p>
+                        <p>My expertise spans red team operations, OSINT tactics, phishing simulations, digital forensics, and AI-powered intelligence gathering. I'm also the author of the upcoming book "Fundamentals of Networking & Secure Configurations."</p>
+                    </div>
+                    <div class="mt-6">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book h-5 w-5 text-[#ef4343] mr-2" data-lov-id="src/components/About.tsx:44:14" data-lov-name="Book" data-component-path="src/components/About.tsx" data-component-line="44" data-component-file="About.tsx" data-component-name="Book" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-[#ef4343]%20mr-2%22%7D"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path></svg>
+                            <span class="text-foreground font-semibold">Upcoming Publication</span>
+                        </div>
+                        <p class="text-[#94a3b8] ml-7">
+                            "Fundamentals of Networking & Secure Configurations"
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center animate-fade-in-delayed">
+                    <img src="./images/cyberfort-badge.png" class="w-64 h-auto" alt="">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-lg border text-card-foreground shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343]  animate-fade-in" style="animation-delay: 0ms;">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield h-10 w-10 text-[#ef4343]" data-lov-id="src/components/ui/stat-card.tsx:29:12" data-lov-name="Icon" data-component-path="src/components/ui/stat-card.tsx" data-component-line="29" data-component-file="stat-card.tsx" data-component-name="Icon" data-component-content="%7B%22className%22%3A%22h-10%20w-10%20text-[#ef4343]%22%7D"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                        </div>
+                        <div class="text-3xl font-bold text-foreground mb-2">
+                            100+
+                        </div>
+                        <div class="text-[#94a3b8] text-sm">Security Solutions Deployed</div>
+                    </div>
+                </div>
+                <div class="rounded-lg border text-card-foreground shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343]  animate-fade-in" style="animation-delay: 100ms;">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-10 w-10 text-[#ef4343]" data-lov-id="src/components/ui/stat-card.tsx:29:12" data-lov-name="Icon" data-component-path="src/components/ui/stat-card.tsx" data-component-line="29" data-component-file="stat-card.tsx" data-component-name="Icon" data-component-content="%7B%22className%22%3A%22h-10%20w-10%20text-[#ef4343]%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                        </div>
+                        <div class="text-3xl font-bold text-foreground mb-2">
+                            200+
+                        </div>
+                        <div class="text-[#94a3b8] text-sm">Red Team Operations</div>
+                    </div>
+                </div>
+                <div class="rounded-lg border text-card-foreground shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343]  animate-fade-in" style="animation-delay: 200ms;">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-10 w-10 text-[#ef4343]" data-lov-id="src/components/ui/stat-card.tsx:29:12" data-lov-name="Icon" data-component-path="src/components/ui/stat-card.tsx" data-component-line="29" data-component-file="stat-card.tsx" data-component-name="Icon" data-component-content="%7B%22className%22%3A%22h-10%20w-10%20text-[#ef4343]%22%7D"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="text-3xl font-bold text-foreground mb-2">
+                            50+
+                        </div>
+                        <div class="text-[#94a3b8] text-sm">Enterprise Clients Served</div>
+                    </div>
+                </div>
+                <div class="rounded-lg border text-card-foreground shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343]  animate-fade-in" style="animation-delay: 300ms;">
+                    <div class="p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-10 w-10 text-[#ef4343]" data-lov-id="src/components/ui/stat-card.tsx:29:12" data-lov-name="Icon" data-component-path="src/components/ui/stat-card.tsx" data-component-line="29" data-component-file="stat-card.tsx" data-component-name="Icon" data-component-content="%7B%22className%22%3A%22h-10%20w-10%20text-[#ef4343]%22%7D"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                        </div>
+                        <div class="text-3xl font-bold text-foreground mb-2">
+                            8+
+                        </div>
+                        <div class="text-[#94a3b8] text-sm">Years in Cybersecurity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#000000] border-0" id="services">
+        <div class="lg:px-[32px] md:px-[24px] p-[16px] max-w-7xl mx-auto">
+            <div class="mb-16 text-center animate-fade-in">
+                <h2 class="text-4xl font-bold text-[#f8fafc] mb-4">Core Competencies</h2>
+                <p class="text-xl text-[#94a3b8] max-w-3xl mx-auto">Tactical cybersecurity solutions for government agencies, military organizations, and enterprise clients requiring sophisticated security operations.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Red Team Operations & Training</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">Advanced adversary simulation, tactical training programs, and military-grade red team operations for defense personnel.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Cybersecurity-as-a-Service</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">24/7 monitoring, threat detection, and advanced protection for government agencies and enterprise clients.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 100ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">OSINT & Threat Intelligence</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">Open-source intelligence gathering, reconnaissance capabilities, and AI-powered intelligence operations.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Government & Military Training</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">Specialized cybersecurity training for federal agencies and military cyberwarfare command personnel.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Secure Coding & DevSecOps</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">OWASP standards implementation, secure development training, and DevSecOps integration for teams.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Custom LLM for Cyber Operations</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">Development of specialized large language models for cybersecurity threat operations and analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Live Cyber Range Training</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">HTB-style platforms, live cyber drills, and hands-on cybersecurity training environments.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-lg border text-[#f8fafc] shadow-sm card-hover bg-[#14161a] border-[#373d48] hover:border-[#ef4343] animate-scale-in" style="animation-delay: 0ms;">
+                    <div class="flex flex-col space-y-1.5 p-6 text-center pb-3">
+                        <div class="flex justify-center mb-3">
+                            <div class="p-3 bg-[#2f0404] rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book h-6 w-6 text-[#ef4343]" data-lov-id="src/components/ui/cyber-card.tsx:53:16" data-lov-name="Icon" data-component-path="src/components/ui/cyber-card.tsx" data-component-line="53" data-component-file="cyber-card.tsx" data-component-name="Icon" data-component-content="%7B%7D"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold tracking-tight text-[#f8fafc] text-lg leading-tight">Digital Forensics & Investigation</h3>
+                        <p class="text-[#94a3b8] text-center text-sm leading-relaxed">Advanced digital forensics training, incident response, and cybersecurity awareness programs.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-950" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    Strategic
+                    <span class="text-red-500">Projects</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Advanced cybersecurity solutions and frameworks developed for enterprise, military, and government applications</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-black/40 border-red-600/20 hover:border-red-600/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="p-3 bg-red-600/20 rounded-lg group-hover:bg-red-600/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield h-6 w-6 text-red-500" data-lov-id="src/components/Projects.tsx:61:22" data-lov-name="project.icon" data-component-path="src/components/Projects.tsx" data-component-line="61" data-component-file="Projects.tsx" data-component-name="project.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight text-white text-xl mb-1">Advanced Threat Detection System</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="px-2 py-1 bg-red-600/20 text-red-400 text-xs rounded">Cybersecurity Platform</span>
+                                        <span class="px-2 py-1 bg-gray-600/20 text-gray-400 text-xs rounded">Enterprise Solution</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-base leading-relaxed">AI-powered threat detection and response system designed for enterprise environments. Features real-time monitoring, automated incident response, and comprehensive threat intelligence integration.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-red-400 mb-3">Technologies & Methods</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Python</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Machine Learning</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">SIEM</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">API Integration</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-[#000000] hover:text-[#f8fafc] h-9 rounded-md px-3 border-red-600/50 text-red-400 hover:bg-red-600/20 hover:border-red-600 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:96:20" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="96" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                Case Study
+                            </button>
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-9 rounded-md px-3 text-gray-400 hover:text-red-400 hover:bg-red-600/10 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:104:20" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="104" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                Technical Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-black/40 border-red-600/20 hover:border-red-600/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="p-3 bg-red-600/20 rounded-lg group-hover:bg-red-600/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-6 w-6 text-red-500" data-lov-id="src/components/Projects.tsx:61:22" data-lov-name="project.icon" data-component-path="src/components/Projects.tsx" data-component-line="61" data-component-file="Projects.tsx" data-component-name="project.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight text-white text-xl mb-1">Red Team Simulation Framework</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="px-2 py-1 bg-red-600/20 text-red-400 text-xs rounded">Red Team Operations</span>
+                                        <span class="px-2 py-1 bg-gray-600/20 text-gray-400 text-xs rounded">Government Grade</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-base leading-relaxed">Comprehensive red team testing framework for military and government organizations. Includes advanced penetration testing tools, social engineering modules, and detailed reporting systems.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-red-400 mb-3">Technologies & Methods</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Kali Linux</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Custom Tools</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Network Security</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">OSINT</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-[#000000] hover:text-[#f8fafc] h-9 rounded-md px-3 border-red-600/50 text-red-400 hover:bg-red-600/20 hover:border-red-600 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:96:20" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="96" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                Case Study
+                            </button>
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-9 rounded-md px-3 text-gray-400 hover:text-red-400 hover:bg-red-600/10 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:104:20" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="104" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                Technical Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-black/40 border-red-600/20 hover:border-red-600/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="p-3 bg-red-600/20 rounded-lg group-hover:bg-red-600/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock h-6 w-6 text-red-500" data-lov-id="src/components/Projects.tsx:61:22" data-lov-name="project.icon" data-component-path="src/components/Projects.tsx" data-component-line="61" data-component-file="Projects.tsx" data-component-name="project.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight text-white text-xl mb-1">Secure Communication Protocol</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="px-2 py-1 bg-red-600/20 text-red-400 text-xs rounded">Secure Communications</span>
+                                        <span class="px-2 py-1 bg-gray-600/20 text-gray-400 text-xs rounded">Military Standard</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-base leading-relaxed">Military-grade encrypted communication system with advanced cryptographic protocols. Designed for high-security environments requiring zero-trust architecture.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-red-400 mb-3">Technologies & Methods</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Cryptography</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">C++</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Network Protocols</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Zero-Trust</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-[#000000] hover:text-[#f8fafc] h-9 rounded-md px-3 border-red-600/50 text-red-400 hover:bg-red-600/20 hover:border-red-600 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:96:20" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="96" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                Case Study
+                            </button>
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-9 rounded-md px-3 text-gray-400 hover:text-red-400 hover:bg-red-600/10 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:104:20" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="104" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                Technical Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-black/40 border-red-600/20 hover:border-red-600/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="p-3 bg-red-600/20 rounded-lg group-hover:bg-red-600/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-6 w-6 text-red-500" data-lov-id="src/components/Projects.tsx:61:22" data-lov-name="project.icon" data-component-path="src/components/Projects.tsx" data-component-line="61" data-component-file="Projects.tsx" data-component-name="project.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold tracking-tight text-white text-xl mb-1">OSINT Intelligence Platform</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="px-2 py-1 bg-red-600/20 text-red-400 text-xs rounded">Threat Intelligence</span>
+                                        <span class="px-2 py-1 bg-gray-600/20 text-gray-400 text-xs rounded">Professional Tool</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-base leading-relaxed">Advanced open-source intelligence gathering and analysis platform. Features automated data collection, threat correlation, and actionable intelligence reporting.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-red-400 mb-3">Technologies & Methods</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Python</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Data Mining</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">API Integration</span>
+                                <span class="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50">Intelligence Analysis</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-[#000000] hover:text-[#f8fafc] h-9 rounded-md px-3 border-red-600/50 text-red-400 hover:bg-red-600/20 hover:border-red-600 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:96:20" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="96" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                                Case Study
+                            </button>
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-9 rounded-md px-3 text-gray-400 hover:text-red-400 hover:bg-red-600/10 cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-2 h-4 w-4" data-lov-id="src/components/Projects.tsx:104:20" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="104" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                Technical Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3">View All Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900" id="experience">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Professional Experience</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Extensive experience in tactical cybersecurity, advanced security operations, and enterprise security solutions across Nigeria.</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <h2 class="text-2xl font-bold text-white mb-8">Professional Journey</h2>
+                    <div class="space-y-8">
+                        <div class="rounded-lg border text-[#f8fafc] shadow-sm bg-black/50 border-red-600/20">
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3 class="font-semibold tracking-tight text-white text-xl">Senior Cybersecurity Consultant</h3>
+                                <div class="flex flex-wrap gap-4 text-gray-400 text-sm">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4 mr-1" data-lov-id="src/components/Experience.tsx:64:24" data-lov-name="Calendar" data-component-path="src/components/Experience.tsx" data-component-line="64" data-component-file="Experience.tsx" data-component-name="Calendar" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-1%22%7D"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                        2020 - Present
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 mr-1" data-lov-id="src/components/Experience.tsx:68:24" data-lov-name="MapPin" data-component-path="src/components/Experience.tsx" data-component-line="68" data-component-file="Experience.tsx" data-component-name="MapPin" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-1%22%7D"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        Nigeria
+                                    </div>
+                                </div>
+                                <div class="text-red-500 font-semibold">
+                                    CyberFort
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <ul class="space-y-2 text-gray-300">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Developed comprehensive cybersecurity solutions for government and enterprise clients
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Led advanced red team operations and security assessments
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Built custom security frameworks and threat detection systems
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Created specialized AI-powered solutions for cyber threat operations
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rounded-lg border text-[#f8fafc] shadow-sm bg-black/50 border-red-600/20">
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3 class="font-semibold tracking-tight text-white text-xl">Red Team Operations Specialist</h3>
+                                <div class="flex flex-wrap gap-4 text-gray-400 text-sm">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4 mr-1" data-lov-id="src/components/Experience.tsx:64:24" data-lov-name="Calendar" data-component-path="src/components/Experience.tsx" data-component-line="64" data-component-file="Experience.tsx" data-component-name="Calendar" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-1%22%7D"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                        2018 - Present
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 mr-1" data-lov-id="src/components/Experience.tsx:68:24" data-lov-name="MapPin" data-component-path="src/components/Experience.tsx" data-component-line="68" data-component-file="Experience.tsx" data-component-name="MapPin" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-1%22%7D"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        Nigeria
+                                    </div>
+                                </div>
+                                <div class="text-red-500 font-semibold">CyberFort Tactical Division</div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <ul class="space-y-2 text-gray-300">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Led advanced red team operations and adversary simulation exercises
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Conducted sophisticated phishing simulations and social engineering assessments
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Developed HTB-style cyber range platforms for security testing
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" data-lov-id="src/components/Experience.tsx:78:26" data-lov-name="Target" data-component-path="src/components/Experience.tsx" data-component-line="78" data-component-file="Experience.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-4%20w-4%20text-red-500%20mr-2%20mt-0.5%20flex-shrink-0%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Specialized in OSINT tactics and AI-powered intelligence gathering
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-8">Certifications</h3>
+                    <div class="rounded-lg border text-card-foreground shadow-sm bg-black/50 border-red-600/20 mb-8">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-6 w-6 text-red-500 mr-2" data-lov-id="src/components/Experience.tsx:95:18" data-lov-name="Award" data-component-path="src/components/Experience.tsx" data-component-line="95" data-component-file="Experience.tsx" data-component-name="Award" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%20mr-2%22%7D"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                                <h3 class="text-2xl font-semibold leading-none tracking-tight text-white">Professional Certifications</h3>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-gray-300">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                    Certified Ethical Hacker (CEH)
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                    Red Team Operations Certified
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                    OSINT Professional Certification
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                    Digital Forensics Specialist
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                    Advanced Cybersecurity Methodologies
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                    Secure Coding Standards (OWASP)
+                                </li>
+                            </ul>
+                        </div>    
+                    </div>
+
+                    <div class="rounded-lg border text-[#f8fafc] shadow-sm bg-black/50 border-red-600/20">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="text-2xl font-semibold leading-none tracking-tight text-white">Core Expertise</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Red Team Operations</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">OSINT Tactics</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Advanced Cybersecurity</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Enterprise Security</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Digital Forensics</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Phishing Simulation</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Threat Intelligence</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Social Engineering</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Custom LLM Development</span>
+                                <span class="px-3 py-1 bg-red-600/10 text-red-500 rounded-full text-sm border border-red-600/20">Security Assessment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Strategic Consultation</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Ready to enhance your organization's cybersecurity posture? Let's discuss tactical security solutions for your government agency or enterprise.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-8">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-red-600/10 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-6 w-6 text-red-500" data-lov-id="src/components/Contact.tsx:49:20" data-lov-name="info.icon" data-component-path="src/components/Contact.tsx" data-component-line="49" data-component-file="Contact.tsx" data-component-name="info.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Email</p>
+                                <a href="mailto:" class="text-white hover:text-red-500 transition-colors">toyeeb@cyberfort.ng</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 bg-red-600/10 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-6 w-6 text-red-500" data-lov-id="src/components/Contact.tsx:49:20" data-lov-name="info.icon" data-component-path="src/components/Contact.tsx" data-component-line="49" data-component-file="Contact.tsx" data-component-name="info.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">LinkedIn</p>
+                                <a href="mailto:" class="text-white hover:text-red-500 transition-colors" target="_blank">toyeeb-akintayo</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 bg-red-600/10 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-6 w-6 text-red-500" data-lov-id="src/components/Contact.tsx:49:20" data-lov-name="info.icon" data-component-path="src/components/Contact.tsx" data-component-line="49" data-component-file="Contact.tsx" data-component-name="info.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%22%7D"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Location</p>
+                                <div class="text-white">Nigeria</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mt-8">
+                        <div class="rounded-lg border bg-[#14161a] text-[#f8fafc] shadow-sm bg-gradient-to-r from-red-600/10 to-red-700/10 border-red-600/20">
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-6 w-6 text-red-500 mr-2" data-lov-id="src/components/Contact.tsx:75:20" data-lov-name="Target" data-component-path="src/components/Contact.tsx" data-component-line="75" data-component-file="Contact.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%20mr-2%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                    <h3 class="text-2xl font-semibold leading-none tracking-tight text-white">Red Team Assessment </h3>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-300 mb-4">Get a comprehensive red team assessment to identify vulnerabilities and strengthen your security posture.</p>
+                                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold">Request Assessment</button>
+                            </div>
+                        </div>
+                        <div class="rounded-lg border bg-[#14161a] text-[#f8fafc] shadow-sm bg-gradient-to-r from-red-600/10 to-red-700/10 border-red-600/20">
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield h-6 w-6 text-red-500 mr-2" data-lov-id="src/components/Contact.tsx:93:20" data-lov-name="Shield" data-component-path="src/components/Contact.tsx" data-component-line="93" data-component-file="Contact.tsx" data-component-name="Shield" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-red-500%20mr-2%22%7D"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                                    <h3 class="text-2xl font-semibold leading-none tracking-tight text-white">Government Training</h3>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-300 mb-4">Specialized cybersecurity training programs for government agencies and military personnel.</p>
+                                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold">Schedule Training</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="rounded-lg border text-card-foreground shadow-sm bg-gray-900 border-red-600/20">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="text-2xl font-semibold leading-none tracking-tight text-white">Send a Message</h3>
+                        </div>
+                        <div class="p-6 pt-0 space-y-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="" class="text-gray-400 text-sm mb-2 block">First Name</label>
+                                    <input type="text" name="" id="" class="flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-black/50 border-gray-700 text-white focus:border-red-500" placeholder="John">
+                                </div>
+    
+                                <div>
+                                    <label for="" class="text-gray-400 text-sm mb-2 block">Last Name</label>
+                                    <input type="text" name="" id="" class="flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-black/50 border-gray-700 text-white focus:border-red-500" placeholder="Doe">
+                                </div>
+                            </div>
+    
+                            <div>
+                                <label for="" class="text-gray-400 text-sm mb-2 block">Email</label>
+                                <input type="email" name="" id="" class="flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-black/50 border-gray-700 text-white focus:border-red-500" placeholder="john@example.com">
+                            </div>
+    
+                            <div>
+                                <label for="" class="text-gray-400 text-sm mb-2 block">Organization Type</label>
+                                <input type="text" name="" id="" class="flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-black/50 border-gray-700 text-white focus:border-red-500" placeholder="Government Agency / Military / Enterprise">
+                            </div>
+    
+                            <div>
+                                <lable class="text-gray-400 text-sm mb-2 block">Security Requirements</lable>
+                                <textarea name="" id="" class="flex w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-black/50 border-gray-700 text-white focus:border-red-500 min-h-32" placeholder="Describe your cybersecurity needs, training requirements, or security challenges..."></textarea>
+                            </div>
+                            
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 w-full bg-red-600 hover:bg-red-700 text-white font-semibold">Send Strategic Inquiry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-red-600/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-8 w-8 text-red-500" data-lov-id="src/components/Footer.tsx:12:14" data-lov-name="Target" data-component-path="src/components/Footer.tsx" data-component-line="12" data-component-file="Footer.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-red-500%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                        <span class="text-xl font-bold text-white">Toyeeb Akintayo</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Lead Cybersecurity Instructor specializing in government and military cybersecurity training, red team operations, and tactical threat intelligence.</p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:" class="text-gray-400 hover:text-red-500 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-5 w-5" data-lov-id="src/components/Footer.tsx:24:16" data-lov-name="Mail" data-component-path="src/components/Footer.tsx" data-component-line="24" data-component-file="Footer.tsx" data-component-name="Mail" data-component-content="%7B%22className%22%3A%22h-5%20w-5%22%7D"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/toyeeb-akintayo-250879232/" class="text-gray-400 hover:text-red-500 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5" data-lov-id="src/components/Footer.tsx:32:16" data-lov-name="Linkedin" data-component-path="src/components/Footer.tsx" data-component-line="32" data-component-file="Footer.tsx" data-component-name="Linkedin" data-component-content="%7B%22className%22%3A%22h-5%20w-5%22%7D"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Core Competencies</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Red Team Operations & Training</li>
+                        <li>Government & Military Training</li>
+                        <li>OSINT & Threat Intelligence</li>
+                        <li>Cybersecurity-as-a-Service</li>
+                        <li>Digital Forensics</li>
+                        <li>Custom LLM Development</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">CyberFort</h3>
+                    <p class="text-gray-400 mb-4">Nigeria's leading provider of tactical cybersecurity solutions for government agencies, military organizations, and enterprise clients.</p>
+                    <a href="" class="text-red-500 hover:text-red-400 transition-colors"></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Toyeeb Akintayo - CyberFort Tactical Cybersecurity. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
