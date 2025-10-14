@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* Enable native smooth scrolling in supporting browsers as a graceful fallback */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Active nav link: bold, larger, red-500 (same as hover) - scoped to nav anchors */
+nav a.active,
+.mobile-nav-link.active {
+	font-weight: 700;
+	font-size: 1.15em;
+	color: #ef4444 !important; /* Tailwind text-red-500 */
+	transition: color 0.3s, font-size 0.2s;
+}

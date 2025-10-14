@@ -28,8 +28,8 @@
     </style>
 </head>
 <body class="">
-    <nav class=" text-white fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-red-600/20 z-50">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16">
+    <nav class="px-4 sm:px-6 lg:px-8 text-white fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-red-600/20 z-50">
+        <div class="flex justify-between items-center max-w-7xl mx-auto h-16">
             <div class="flex items-center space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-8 w-8 text-red-500" data-lov-id="src/components/Navigation.tsx:23:12" data-lov-name="Target" data-component-path="src/components/Navigation.tsx" data-component-line="23" data-component-file="Navigation.tsx" data-component-name="Target" data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-red-500%22%7D"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                 <div>
@@ -37,17 +37,36 @@
                     <p class="text-xs text-[#ef4444]">CyberFort</p>
                 </div>    
             </div>
-    
+            
             <ul class="md:flex hidden space-x-8">
-                <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Home</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">About</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Competencies</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Projects</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Experience</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Contact</a></li>
+                <li><a href="#home" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Home</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">About</a></li>
+                <li><a href="#services" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Competencies</a></li>
+                <li><a href="#projects" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Projects</a></li>
+                <li><a href="#experience" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Experience</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-red-500 transition-colors duration-300 font-medium">Contact</a></li>
             </ul>
 
-            <!-- <div data-lov-id="src/components/Navigation.tsx:44:10" data-lov-name="div" data-component-path="src/components/Navigation.tsx" data-component-line="44" data-component-file="Navigation.tsx" data-component-name="div" data-component-content="%7B%22className%22%3A%22md%3Ahidden%22%7D" class="md:hidden"><button data-lov-id="src/components/Navigation.tsx:45:12" data-lov-name="Button" data-component-path="src/components/Navigation.tsx" data-component-line="45" data-component-file="Navigation.tsx" data-component-name="Button" data-component-content="%7B%22className%22%3A%22text-white%20hover%3Atext-red-500%22%7D" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&[#14161a]p;_svg]:[#373d48] hover:bg-[#ef4343]  h-10 w-10 text-white hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" data-lov-id="src/components/Navigation.tsx:51:52" data-lov-name="Menu" data-component-path="src/components/Navigation.tsx" data-component-line="51" data-component-file="Navigation.tsx" data-component-name="Menu" data-component-content="%7B%22className%22%3A%22h-6%20w-6%22%7D"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div> -->
+            <button id="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false" class="md:hidden block text-[#ef4444] border border-[#ef4444] rounded-md p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" data-lov-id="src/components/Navigation.tsx:51:52" data-lov-name="Menu" data-component-path="src/components/Navigation.tsx" data-component-line="51" data-component-file="Navigation.tsx" data-component-name="Menu" data-component-content="%7B%22className%22%3A%22h-6%20w-6%22%7D">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+                <!-- Menu -->
+            </button>
+            
+        </div>
+
+        <div id="mobile-nav" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 flex flex-col gap-4 space-y-1 bg-black/95">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300">About</a>
+                <a href="#services" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300">Competencies</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300">Projects</a>
+                <a href="#experience" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300">Experience</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-red-500 transition-colors duration-300">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -66,7 +85,7 @@
                 
                 <p class="text-xl text-gray-300 mb-4 animate-fade-in delay-500 transform transition-all duration-500 hover:text-white">Cybersecurity Specialist & Red Team Operations Expert</p>
                 
-                <p class="text-lg mb-8 max-w-2xl mx-auto animate-fade-in delay-700 transform transition-all duration-500 hover:text-gray-300">Advanced cybersecurity professional specializing in red team operations, threat intelligence, and tactical security solutions. Nigeria's leading cybersecurity expert.</p>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in delay-700 transform transition-all duration-500 hover:text-white">Advanced cybersecurity professional specializing in red team operations, threat intelligence, and tactical security solutions. Nigeria's leading cybersecurity expert.</p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-1000">
                     <a href="#"
@@ -615,7 +634,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-black">
+    <section class="py-20 bg-black" id="contact">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">Strategic Consultation</h2>
@@ -767,5 +786,158 @@
             </div>
         </div>
     </footer>
+
+    <!-- Smooth scroll script for single-page nav links -->
+    <script>
+        (function () {
+            // Select all in-page nav links that reference an id
+            const navLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
+            if (!navLinks.length) return;
+
+            // Map of section id to all nav links (desktop and mobile)
+            const sectionMap = {};
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const id = href.slice(1);
+                    if (!sectionMap[id]) sectionMap[id] = [];
+                    sectionMap[id].push(link);
+                }
+            });
+
+            // Height of the fixed header (computed at runtime to handle responsive changes)
+            function getHeaderOffset() {
+                const header = document.querySelector('nav');
+                if (!header) return 0;
+                return Math.ceil(header.getBoundingClientRect().height);
+            }
+
+            // Smooth scroll helper using window.scrollTo with behavior: 'smooth'
+            function scrollToElement(targetEl, afterMobileNavClose = false) {
+                if (!targetEl) return;
+                // If mobile nav is open, close it first and then scroll after a short delay
+                const isMobile = window.innerWidth < 768;
+                if (isMobile && mobileNav && !mobileNav.classList.contains('hidden') && !afterMobileNavClose) {
+                    closeMobileNav();
+                    setTimeout(() => scrollToElement(targetEl, true), 250); // wait for nav to close
+                    return;
+                }
+                const headerOffset = getHeaderOffset();
+                const targetRect = targetEl.getBoundingClientRect();
+                const absoluteY = window.pageYOffset + targetRect.top;
+                const scrollToY = Math.max(absoluteY - headerOffset, 0);
+                window.scrollTo({ top: scrollToY, behavior: 'smooth' });
+            }
+
+            // Handle click and keyboard activation (Enter) for accessibility
+            function handleNavClick(e) {
+                if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+                const href = this.getAttribute('href');
+                if (!href || href === '#' || !href.startsWith('#')) return;
+                const id = href.slice(1);
+                const target = document.getElementById(id);
+                if (!target) return;
+                e.preventDefault();
+                scrollToElement(target);
+                try {
+                    history.pushState(null, '', '#' + id);
+                } catch (err) {
+                    location.hash = '#' + id;
+                }
+            }
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                link.addEventListener('click', handleNavClick, { passive: false });
+                link.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') handleNavClick.call(this, e);
+                });
+            });
+
+            // Mobile nav toggle
+            const mobileToggleBtn = document.getElementById('mobile-nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            function openMobileNav() {
+                if (!mobileNav || !mobileToggleBtn) return;
+                mobileNav.classList.remove('hidden');
+                mobileToggleBtn.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMobileNav() {
+                if (!mobileNav || !mobileToggleBtn) return;
+                mobileNav.classList.add('hidden');
+                mobileToggleBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            if (mobileToggleBtn && mobileNav) {
+                mobileToggleBtn.addEventListener('click', function (e) {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    if (expanded) closeMobileNav(); else openMobileNav();
+                });
+
+                // Close mobile nav when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!mobileNav || !mobileToggleBtn) return;
+                    if (!mobileNav.contains(e.target) && !mobileToggleBtn.contains(e.target)) {
+                        closeMobileNav();
+                    }
+                });
+
+                // Close on Escape
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') closeMobileNav();
+                });
+
+                // Close when a mobile link is clicked
+                const mobileLinks = Array.from(document.querySelectorAll('.mobile-nav-link'));
+                mobileLinks.forEach(l => l.addEventListener('click', function () { closeMobileNav(); }));
+            }
+
+            // Active section highlighting
+            const sectionIds = Object.keys(sectionMap);
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            function setActiveNav(id) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (sectionMap[id]) sectionMap[id].forEach(link => link.classList.add('active'));
+            }
+
+            function onScroll() {
+                const headerOffset = getHeaderOffset();
+                let found = false;
+                for (let i = 0; i < sections.length; i++) {
+                    const section = sections[i];
+                    const rect = section.getBoundingClientRect();
+                    // Section is considered active if its top is at or above the header, and its bottom is below the header
+                    if (rect.top - headerOffset <= 2 && rect.bottom - headerOffset > 2) {
+                        setActiveNav(section.id);
+                        found = true;
+                        break;
+                    }
+                }
+                // If no section is active (scrolled above first), clear all
+                if (!found) navLinks.forEach(link => link.classList.remove('active'));
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            // Initial highlight
+            setTimeout(onScroll, 100);
+
+            // If the page is loaded with a hash, scroll to it taking header offset into account
+            window.addEventListener('load', function () {
+                if (location.hash) {
+                    const id = location.hash.slice(1);
+                    const target = document.getElementById(id);
+                    if (target) {
+                        setTimeout(() => scrollToElement(target), 50);
+                    }
+                }
+                setTimeout(onScroll, 100);
+            });
+        })();
+    </script>
 </body>
 </html>
